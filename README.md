@@ -29,4 +29,22 @@ I wanted to use the bare minimum so be aware that you could totally opt for high
 ![IMG_4787](https://user-images.githubusercontent.com/47153835/56515693-5786f580-64ed-11e9-98da-250487cbba04.png)
 
 ### Raspberry Pi Setup
-Fir
+First and foremost we need to setup our brand new Raspberry Pi with an operating system. The easiest way to do this is by using Raspbian NOOBS OS. NOOBS stands for New Out Of the Box Software. When you have a completely new Raspberry Pi this will help you load the operating system with little to no work.  
+
+You can find the latest NOOBS download at [downloads.raspberrypi.org/NOOBS_latest](https://downloads.raspberrypi.org/NOOBS_latest).
+
+Downloading this zip file will take a while but once it is complete you simply open the file and then click on "extract all". ![extract](https://user-images.githubusercontent.com/47153835/56516329-0841c480-64ef-11e9-9e51-6d7d72ece6ea.PNG)
+Then you just simply clock on extract and it will bring you to the files. 
+![all](https://user-images.githubusercontent.com/47153835/56516337-0e37a580-64ef-11e9-8583-03c949dd3fff.PNG)Next you plug in your MicroSD card and open it up. Last, but certainly not least, you drag all of contents of the new folder onto the empty MicroSD card. Before you pull out the MicroSD card, make sure to properly eject the card. Once you have take the card out simply place it into the Raspberry Pi 3 on the underside of the motherboard with the notches facing outward and the lettering facing towards you. 
+
+Now we move onto installing the operating system. Plug in all of your cables, including your keyboard & mouse, the usb microphone, the 3.5 mm audio jack for the speaker/headphones, the HDMI to the monitor and then 2.5A Micro USB power cable. 
+
+When you plug in the power cable your Raspberry Pi will automatically begin to boot. You will see the loading screen on your HDMI output screen go through the boot process.  Once the Raspberry Pi loads up correctly you will be asked to configure a few things. Check the box next to the "Raspbian[Recommended} and make sure to pick your language at the bottom of the screen. Once you have configured your preferences, click on the Install button on the upper left-hand side. 
+
+Now we wait.. this will take a while. Eventually you will see a success message. Click OK and then your desktop will populate. Now you will have the opportunity to connect to your Wi-Fi network, if you so choose to. Being connected to the Wi-Fi however will increase download speeds and allow you to remote into the Raspberry Pi remotely. The default login for Raspbian is username **pi** with the password **raspberry**. At this point we will make sure sound will be coming out o
+
+
+## 2 - Installing utilities - SSH, VNC S
+
+
+to be continued...
