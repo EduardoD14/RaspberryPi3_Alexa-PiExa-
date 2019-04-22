@@ -6,7 +6,7 @@ Build your very own PiExa with this guide like I did!
 I have been wanting to put together a RaspberryPi3 project but for one reason or another it kept getting delayed. I finally decided to just go ahead and schedule a time to move forward with a project regardless of how busy I was and I am sure glad I did. In this guide I will show you how to access Amazon's Alexa voice service using a Java client installed on a Raspberry Pi along with a Node.js server.  You will use the Node.js server to obtain a Login with Amazon for your authorization code that will allow you to register your "Alexa enabled device" with Amazon. Amazon provides their own guide but I found it to be not too easy to follow for someone who has never touched a Raspberry Pi so hopefully this will be a little easier to follow. Have fun!
 
 ___
-# Let's Get Started!
+# 1) Let's Get Started!
 
 ### Hardware 
 I wanted to use the bare minimum so be aware that you could totally opt for higher quality products.
@@ -41,10 +41,32 @@ Now we move onto installing the operating system. Plug in all of your cables, in
 
 When you plug in the power cable your Raspberry Pi will automatically begin to boot. You will see the loading screen on your HDMI output screen go through the boot process.  Once the Raspberry Pi loads up correctly you will be asked to configure a few things. Check the box next to the "Raspbian[Recommended} and make sure to pick your language at the bottom of the screen. Once you have configured your preferences, click on the Install button on the upper left-hand side. 
 
-Now we wait.. this will take a while. Eventually you will see a success message. Click OK and then your desktop will populate. Now you will have the opportunity to connect to your Wi-Fi network, if you so choose to. Being connected to the Wi-Fi however will increase download speeds and allow you to remote into the Raspberry Pi remotely. The default login for Raspbian is username **pi** with the password **raspberry**. At this point we will make sure sound will be coming out o
+Now we wait.. this will take a while. Eventually you will see a success message. Click OK and then your desktop will populate. Now you will have the opportunity to connect to your Wi-Fi network, if you so choose to. Being connected to the Wi-Fi however will increase download speeds and allow you to remote into the Raspberry Pi remotely. The default login for Raspbian is username **pi** with the password **raspberry**. At this point we will make sure sound will be coming out of the audio jack. To do so, right-click the speaker icon on the top right hand of the screen on the desktop and select **Analog**. 
 
 
-## 2 - Installing utilities - SSH, VNC S
+## 2 - Utilities - SSH & Node
+**NOTE**: With the latest Pi3's we have VNC already installed. To make sure it is active open click on the terminal icon on the top left of the screen. Then type in *sudo raspi-config*. Navigate down to SSH and VNC and make sure they are enabled. This will allow for you to be able to remote in from other devices such as your laptop or even your phone.
+
+Now log onto your mobile device. If you will be remoting in from your iPhone then download the VNC viewer app. If you will be remoting in using your laptop then download the [VNC viewer application](https://www.realvnc.com/en/connect/download/viewer/).
+Once  you have VNC Viewer setup remote into your Raspberry PI. 
+You will need to know your Raspberry Pi's IP address and it will need to be connected to the same Wi-FI network as your mobile device. Once you connect to the Wi-Fi network use the terminal program to find the ip address by using the following command: 
+*hostname -I *
+Your terminal will spit out an ip address which will be determined by the type of network you are on. It may look something like this:
+
+	> 192.168.1.5
+
+Once you have this IP address you are can attempt to remote into the Raspberry Pi. Open your VNC application which will look something like this:
+![image](https://user-images.githubusercontent.com/47153835/56533224-1f42df80-650c-11e9-987c-75213c6ac3c7.png)
+
+Here I already have two connections setup but your screen will most likely be blank. Right click anywhere in the white space and click on new connection like so:
+
+![image](https://user-images.githubusercontent.com/47153835/56533349-5618f580-650c-11e9-9e79-f073b3d5e9b9.png)
+
+Once you click on the *New Connection* option, a new window will populate. 
+
+![image](https://user-images.githubusercontent.com/47153835/56533397-6630d500-650c-11e9-876d-afe246a610b8.png)
+
+In the box where it says *IP address or hostname*, type in your Raspberry Pi's ip address that we found up above. You can name this connection something specific to remind yourself what the connection is. Up above I have to connections named *HomeNetwork* and *Hotspot* so that I know which connection to use depending on whether I am at home or on the go. Leave all the other options as they are. If you are prompted to enter a username and password remmember that the default username is **pi** and the default password is **raspberry**. 
 
 
-to be continued...
+>note: I am still making this guide and will continue to add to it over the next few days.
